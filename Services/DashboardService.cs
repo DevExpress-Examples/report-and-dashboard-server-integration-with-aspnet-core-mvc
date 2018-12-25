@@ -20,7 +20,7 @@ namespace ReportServerIntegration.Services {
         public async Task<DashboardViewerModel> GetViewerModel(string dashboardId) {
             string token = await _tokenService.GetToken();
             return new DashboardViewerModel {
-                DesignerUri = $"{_configuration["baseUri"]}/dashboardDesigner",
+                DesignerUri = $"{_configuration["ReportServerBaseUri"]}/dashboardDesigner",
                 DashboardId = dashboardId,
                 AuthToken = token
             };

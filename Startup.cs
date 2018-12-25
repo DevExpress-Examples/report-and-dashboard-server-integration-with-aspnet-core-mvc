@@ -33,7 +33,7 @@ namespace ReportServerIntegration {
             services.AddDevExpressControls(options => options.Resources = ResourcesType.ThirdParty | ResourcesType.DevExtreme);
            
             services.AddHttpClient("reportServer", config => {
-                config.BaseAddress = new Uri(Configuration["baseUri"]);
+                config.BaseAddress = new Uri(Configuration["ReportServerBaseUri"]);
             });
 
             services.AddScoped<ITokenService, TokenService>();

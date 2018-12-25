@@ -20,7 +20,7 @@ namespace ReportServerIntegration.Services {
         public async Task<ReportViewerModel> GetViewerModel(string reportId) {
             string token = await _tokenService.GetToken();
             return new ReportViewerModel {
-                ServerUri = _configuration["baseUri"],
+                ServerUri = _configuration["ReportServerBaseUri"],
                 ReportUri = $"report/{reportId}",                
                 AuthToken = token
             };
