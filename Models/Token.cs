@@ -1,9 +1,8 @@
-using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace ReportServerIntegration.Models {
-    [DataContract]
     public class Token {
-        [DataMember(Name = "access_token")]
+        [JsonProperty("access_token")]
         public string AuthToken { get; set; }
     }
 }
