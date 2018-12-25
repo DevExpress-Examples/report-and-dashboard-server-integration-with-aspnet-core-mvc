@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DocumentViewerSample.csproj"
+                "${workspaceFolder}/ReportServerIntegration.csproj"
             ],            
             "problemMatcher": "$msCompile",
             "group": {

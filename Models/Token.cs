@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace DocumentViewerSample.Models {
+namespace ReportServerIntegration.Models {
     [DataContract]
     public class Token {
         [DataMember(Name = "access_token")]

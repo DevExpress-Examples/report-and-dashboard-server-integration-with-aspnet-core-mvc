@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace DocumentViewerSample.Services {
+namespace ReportServerIntegration.Services {
     public interface IApiService {
         Task<HttpResponseMessage> GetAsync(string path);
     }

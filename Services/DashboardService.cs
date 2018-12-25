@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using DocumentViewerSample.Models;
+using ReportServerIntegration.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace DocumentViewerSample.Services {
+namespace ReportServerIntegration.Services {
     public interface IDashboardService {
         Task<DashboardViewerModel> GetViewerModel(string dashboardId);
     }

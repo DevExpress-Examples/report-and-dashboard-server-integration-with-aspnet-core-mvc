@@ -1,6 +1,6 @@
 using System;
 
-namespace DocumentViewerSample.Models {
+namespace ReportServerIntegration.Models {
     public class ErrorViewModel {
         public string RequestId { get; set; }
 

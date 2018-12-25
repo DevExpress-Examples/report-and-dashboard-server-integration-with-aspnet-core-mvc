@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace DocumentViewerSample.Models {
+namespace ReportServerIntegration.Models {
     public class DocumentModel {
         public int Id { get; set; }
         public string Name { get; set; }

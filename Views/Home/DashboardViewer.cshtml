@@ -2,7 +2,11 @@
 @using DevExpress.DashboardAspNetCore
 @using DevExpress.DashboardWeb
 
-@model DocumentViewerSample.Models.DashboardViewerModel
+@model ReportServerIntegration.Models.DashboardViewerModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
 
 @section Styles {
     @Html.DevExpress().StyleSheets()

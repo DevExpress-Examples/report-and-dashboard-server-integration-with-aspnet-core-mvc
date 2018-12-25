@@ -4,13 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DocumentViewerSample.Models;
+using ReportServerIntegration.Models;
 using Microsoft.Extensions.Configuration;
-using DocumentViewerSample.Services;
+using ReportServerIntegration.Services;
 using System.Net.Http;
 using Newtonsoft.Json;
 
-namespace DocumentViewerSample.Controllers {
+namespace ReportServerIntegration.Controllers {
     public class HomeController : Controller {
         readonly IApiService _api;
         readonly IReportService _reportService;
