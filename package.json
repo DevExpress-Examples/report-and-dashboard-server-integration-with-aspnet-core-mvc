@@ -1,0 +1,12 @@
+{
+  "name": "documentviewersample",
+  "description": "DevExpress Report and Dashboard Server integration sample",
+  "author": "DevExpress",
+  "private": true,
+  "dependencies": {
+    "cldrjs": "^0.5.0",
+    "devexpress-reporting": "^18.2.3",
+    "globalize": "^1.4.0",
+    "jquery-ui-dist": "^1.12.1"
+  }
+}

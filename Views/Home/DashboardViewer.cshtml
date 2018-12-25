@@ -1,0 +1,28 @@
+@using DevExpress.AspNetCore
+@using DevExpress.DashboardAspNetCore
+@using DevExpress.DashboardWeb
+
+@model DocumentViewerSample.Models.DashboardViewerModel
+
+@section Styles {
+    @Html.DevExpress().StyleSheets()
+}
+
+@section Scripts {
+    @Html.DevExpress().Scripts()
+}
+
+<div class="viewer-container">
+    @(Html.DevExpress().Dashboard("WebDashboardViewer")
+        .BackendOptions(options => 
+            options
+                .Uri(Model.DesignerUri)
+                .RequestHttpHeaders(headers => {
+                    headers.Add("Authorization", $"Bearer {Model.AuthToken}"); 
+                }))
+        .Width("100%")
+        .Height("100%")
+        .WorkingMode(WorkingMode.ViewerOnly)
+        .InitialDashboardId(Model.DashboardId))
+</div>
+

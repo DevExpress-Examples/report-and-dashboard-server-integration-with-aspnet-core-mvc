@@ -1,0 +1,24 @@
+﻿@using DevExpress.AspNetCore
+
+@model IEnumerable<DocumentModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+@foreach(var document in Model) {
+    <li>
+        @if(document.DocumentType == "Report") {
+            <a asp-action="ReportViewer" asp-route-reportId="@document.Id">
+                @document.Name
+            </a>
+        }
+        else if(document.DocumentType == "Dashboard") {
+            <a asp-action="DashboardViewer" asp-route-dashboardId="@document.Id">
+                @document.Name
+            </a>
+        }        
+    </li>
+}
+</ul>

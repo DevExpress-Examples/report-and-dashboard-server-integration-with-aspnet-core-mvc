@@ -1,0 +1,22 @@
+@using DevExpress.AspNetCore
+
+@model DocumentViewerSample.Models.ReportViewerModel
+
+@section Styles {
+    <link href="~/lib/vendors.min.css" rel="stylesheet" />
+    <link href="~/lib/reports.min.css" rel="stylesheet" />
+}
+
+<script src="~/lib/vendors.min.js" type="text/javascript"></script>
+<script src="~/lib/reports.min.js" type="text/javascript"></script>
+
+<div class="viewer-container">
+    @(Html.DevExpress().WebDocumentViewer("WebReportViewer")
+        .RemoteSourceSettings(settings => {
+            settings.ServerUri = Model.ServerUri;
+            settings.AuthToken = Model.AuthToken;
+        })
+        .Width("100%")
+        .Height("100%")
+        .Bind(Model.ReportUri))
+</div>

@@ -1,0 +1,43 @@
+[
+    {
+        "outputFileName": "wwwroot/lib/vendors.min.js",
+        "inputFiles": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/jquery-ui-dist/jquery-ui.min.js",
+            "node_modules/knockout/build/output/knockout-latest.js",
+            "node_modules/cldrjs/dist/cldr.js",
+            "node_modules/cldrjs/dist/cldr/event.js",
+            "node_modules/cldrjs/dist/cldr/supplemental.js",
+            "node_modules/cldrjs/dist/cldr/unresolved.js",
+            "node_modules/globalize/dist/globalize.js",
+            "node_modules/globalize/dist/globalize/currency.js",
+            "node_modules/globalize/dist/globalize/message.js",
+            "node_modules/globalize/dist/globalize/number.js",
+            "node_modules/globalize/dist/globalize/date.js",
+            "node_modules/devextreme/dist/js/dx.all.js"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/lib/reports.min.js",
+        "inputFiles": [
+            "node_modules/@devexpress/analytics-core/dist/js/dx-analytics-core.js",
+            "node_modules/devexpress-reporting/dist/js/dx-webdocumentviewer.js"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/lib/vendors.min.css",
+        "inputFiles": [
+            "node_modules/jquery-ui-dist/jquery-ui.min.css",
+            "node_modules/devextreme/dist/css/dx.common.css",
+            "node_modules/devextreme/dist/css/dx.light.css"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/lib/reports.min.css",
+        "inputFiles": [
+            "node_modules/@devexpress/analytics-core/dist/css/dx-analytics.common.css",
+            "node_modules/@devexpress/analytics-core/dist/css/dx-analytics.light.css",
+            "node_modules/devexpress-reporting/dist/css/dx-webdocumentviewer.css"
+        ]
+    }
+]
