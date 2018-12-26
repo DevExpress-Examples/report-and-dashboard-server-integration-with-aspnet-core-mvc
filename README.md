@@ -41,7 +41,7 @@ Before running the example, perform the following steps:
 
     ``dotnet user-secrets set "ReportServer:UserPassword" "<password>"``
 
-* Run the command below to trust the [HTTPS certificate](https://www.hanselman.com/blog/DevelopingLocallyWithASPNETCoreUnderHTTPSSSLAndSelfSignedCerts.aspx) for ASP.NET Core development:
+* Run the command below to trust the HTTPS certificate for ASP.NET Core development:
 
     ``dotnet dev-certs https --trust``
 
