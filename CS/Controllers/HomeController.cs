@@ -12,18 +12,8 @@ using Newtonsoft.Json;
 
 namespace ReportServerIntegration.Controllers {
     public class HomeController : Controller {
-        readonly IApiService _api;
-        readonly IReportService _reportService;
-        readonly IDashboardService _dashboardService;
-
-        public HomeController(IApiService api, IReportService reportService, IDashboardService dashboardService) {
-            _api = api ?? throw new ArgumentNullException(nameof(api));
-            _reportService = reportService ?? throw new ArgumentNullException(nameof(reportService));
-            _dashboardService = dashboardService ?? throw new ArgumentNullException(nameof(dashboardService));
-        }
-
-        public async Task<IActionResult> Index() {
-            HttpResponseMessage response = await _api.GetAsync("documents");
+        public async Task<IActionResult> Index([FromServices] IApiService api) {
+            HttpResponseMessage response = await api.GetAsync("documents");
             string responseString = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
             var documents =  JsonConvert.DeserializeObject<DocumentModel[]>(responseString);
             return View(documents);
@@ -31,15 +21,15 @@ namespace ReportServerIntegration.Controllers {
 
         [HttpGet]
         [Route("report/{reportId}")]
-        public async Task<IActionResult> ReportViewer(string reportId) {
-            ReportViewerModel model = await _reportService.GetViewerModel(reportId);
+        public async Task<IActionResult> ReportViewer(string reportId, [FromServices] IReportService reportService) {
+            ReportViewerModel model = await reportService.GetViewerModel(reportId);
             return View(model);
         }
 
         [HttpGet]
         [Route("dashboard/{dashboardId}")]
-        public async Task<IActionResult> DashboardViewer(string dashboardId) {
-            DashboardViewerModel model = await _dashboardService.GetViewerModel(dashboardId);
+        public async Task<IActionResult> DashboardViewer(string dashboardId, [FromServices] IDashboardService dashboardService) {
+            DashboardViewerModel model = await dashboardService.GetViewerModel(dashboardId);
             return View(model);
         }
 
