@@ -61,7 +61,7 @@ Open your browser on _http://localhost:5000/_ or _https://localhost:5001/_ to se
 
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=report-and-dashboard-server-integration-with-aspnet-core-mvc&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=report-and-dashboard-server-integration-with-aspnet-core-mvc&~~~was_helpful=no)
 
