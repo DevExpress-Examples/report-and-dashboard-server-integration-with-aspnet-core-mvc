@@ -27,13 +27,12 @@ Before running the example, perform the following steps:
 
 **2. Download Resources and Specify Server Settings**
 
-* Refer to the [https://nuget.devexpress.com/#feed-url](https://nuget.devexpress.com/#feed-url) page and [obtain the NuGet Feed URL](https://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url). This URL includes your personal feed authorization key.
-
-* Open the console and navigate to the example's **CS** folder. Run the commands below to restore dependencies from the DevExpress (with the obtained NuGet Feed URL) and default NuGet package sources:
-
-    ``dotnet restore -s https://nuget.devexpress.com/<auth_key>/api``
+* Open the console and navigate to the example's **CS** folder. Run the commands below to restore dependencies:
 
     ``dotnet restore``
+
+    For additional information, refer to the following help topic: [Install DevExpress Products](https://docs.devexpress.com/GeneralInformation/116042/nuget/obtain-your-nuget-feed-credentials).
+
 
 * Use the following command to install all the necessary [npm](https://www.npmjs.com/) packages:
 
